@@ -17,14 +17,13 @@ from utils.torch_utils import select_device, load_classifier, time_synchronized
 
 def custom_detect(
     weights='yolov5l.pt', # model.pt path(s)
-    source='data/images', # images source
+    source='data/images', # source folder
     imgsz=640, # inference size (pixels)
     conf_thres=0.5, # object confidence threshold
     iou_thres=0.45, # IOU threshold for NMS
     device='', # cuda device, i.e. 0 or 0,1,2,3 or cpu
     view_img=False, # display results
     box_only=False, # output only contains bounding boxes, not original image
-    #to_video=False, # save to video instead of folder of images
     save_txt=False, # save results to *.txt
     save_conf=False, # save confidences in --save-txt labels
     classes: int=None, # only look for certain classes. Probably a list of ints
